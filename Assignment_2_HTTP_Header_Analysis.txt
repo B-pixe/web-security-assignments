@@ -1,0 +1,53 @@
+**Assignment 2: Analyzing HTTP Headers - Report**
+
+**Objective:**
+To analyze HTTP headers using a network packet sniffer (Wireshark) and identify request/response headers, MIME types, and HTTP status codes.
+
+**Tools Used:**
+- Wireshark (Version: 4.x)
+- Chrome browser for HTTP GET and POST requests
+
+---
+
+**Step-by-Step Process:**
+
+**1. Launching Wireshark:**
+- Opened Wireshark and selected the active network interface.
+- Started capture and filtered traffic using: `http`.
+
+**2. Capturing HTTP GET Request:**
+- Opened Chrome and visited `http://example.com`.
+- Wireshark captured the request.
+
+**3. Capturing HTTP POST Request:**
+- Used an HTML form to send a POST request to a local PHP file.
+- Wireshark captured the POST request.
+
+---
+
+**4. Identifying HTTP Headers:**
+
+**Request Headers (GET and POST):**
+- Host
+- User-Agent
+- Accept
+- Content-Type (POST only)
+- Content-Length (POST only)
+
+**Response Headers:**
+- Server
+- Date
+- Content-Type: text/html; charset=UTF-8
+- Content-Length
+
+**5. MIME Type of the Response:**
+- The MIME type seen in response: `text/html`
+
+**6. HTTP Status Code and Explanation:**
+- Status: `200 OK` — Request was successful.
+- Status: `404 Not Found` — Resource was not found (captured by visiting a wrong URL intentionally).
+
+---
+
+**Conclusion:**
+Using Wireshark, we successfully captured and analyzed HTTP GET and POST requests. We identified key headers, MIME types, and HTTP response codes, enhancing our understanding of web communication protocols.
